@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion_movil"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.navegacionbotones.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_fragmentUno"
+            app:destination="@id/fragmentUno" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUno"
+        android:name="com.example.navegacionbotones.FragmentUno"
+        android:label="fragment_uno"
+        tools:layout="@layout/fragment_uno" >
+        <action
+            android:id="@+id/action_fragmentUno_to_fragmentDos"
+            app:destination="@id/fragmentDos" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDos"
+        android:name="com.example.navegacionbotones.FragmentDos"
+        android:label="fragment_dos"
+        tools:layout="@layout/fragment_dos" >
+        <action
+            android:id="@+id/action_fragmentDos_to_fragmentTres"
+            app:destination="@id/fragmentTres" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTres"
+        android:name="com.example.navegacionbotones.FragmentTres"
+        android:label="fragment_tres"
+        tools:layout="@layout/fragment_tres" >
+        <action
+            android:id="@+id/action_fragmentTres_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
